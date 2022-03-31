@@ -1,12 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import * as ReactDOMClient from 'react-dom/client';
 import App from './App';
 import GlobalStyles from './styles/global/index';
+import { StoreProvider } from './context/hooks/storeContext/index';
 
-ReactDOM.render(
-  <>
+const container = document.getElementById('root');
+
+const root = ReactDOMClient.createRoot(container);
+
+root.render(
+  <StoreProvider>
     <GlobalStyles />
     <App />
-  </>,
-  document.getElementById('root'),
+  </StoreProvider>,
 );
