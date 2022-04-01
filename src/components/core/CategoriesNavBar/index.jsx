@@ -1,26 +1,22 @@
-import React, { useId } from 'react';
+import React from 'react';
 import { useStore } from '../../../context/hooks/storeContext';
 import * as S from './styles';
 
 export default function CategoriesNavBar() {
-  const {
-    setCategories,
-    categories: { categories, categorySelected },
-  } = useStore();
+  const { categoryList, categorySelected, setCategorySelected } = useStore();
   const selectCategory = e => {
-    setCategories(prev => ({ ...prev, categorySelected: e.target.id }));
+    setCategorySelected(e.target.innerText);
   };
 
   return (
     <S.CategoriesContainer>
-      {categories.map(category => (
+      {categoryList.map(({ name, id }) => (
         <S.Category
-          key={useId()}
+          key={id}
           onClick={selectCategory}
-          selected={categorySelected === category}
-          id={category}
+          selected={categorySelected === name}
         >
-          {category}
+          {name}
         </S.Category>
       ))}
     </S.CategoriesContainer>

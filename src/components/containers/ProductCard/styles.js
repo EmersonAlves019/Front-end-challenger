@@ -12,6 +12,8 @@ export const ProductCardContainer = styled.div`
   padding: 15px;
   border-radius: 5px;
 
+  cursor: pointer;
+
   background: white;
   border: 1px solid #d9d9d9;
   img {
@@ -59,4 +61,13 @@ export const Price = styled.div`
 export const CartIcon = styled(FaCartPlus)`
   width: 19px;
   color: #b11e89;
+`;
+
+export const Discount = styled.p`
+  position: absolute;
+  background-color: #77d400;
+  padding: 2px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
 `;

@@ -1,21 +1,22 @@
-import React, { useId } from 'react';
+import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import { useStore } from '../../../context/hooks/storeContext';
 import * as S from './styles';
 import CategoryCard from '../CategoryCard';
+import Loading from '../../core/Loading/index';
 
 export default function ProductsList() {
-  const {
-    products: { productsByCategory },
-    categories: { categories },
-  } = useStore();
+  const { products, categoryList, isLoading } = useStore();
 
-  return (
+  return isLoading ? (
+    <Loading />
+  ) : (
     <S.ProductsListContainer>
-      {categories?.map(category => (
+      {categoryList?.map(category => (
         <CategoryCard
-          key={useId()}
+          key={uuidv4()}
           category={category}
-          products={productsByCategory[category]}
+          products={products[category.name]}
         />
       ))}
       <div />

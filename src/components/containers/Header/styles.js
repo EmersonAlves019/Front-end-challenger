@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
-  position: fixed;
   display: flex;
   flex-direction: column;
 
   height: 265px;
-  width: 100vw;
+  width: 100%;
   background: #fff;
 `;
 

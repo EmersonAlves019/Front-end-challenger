@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { HiOutlineSearch } from 'react-icons/hi';
 
-export const SearchContainer = styled.div`
+export const SearchProductForm = styled.div`
   margin: 50px 0;
   width: 81.5vw;
   height: 54px;
-  div {
+  form {
     display: flex;
     align-items: center;
     align-self: flex-start;
@@ -15,6 +15,13 @@ export const SearchContainer = styled.div`
     border-radius: 3px;
     background: #fff;
     border: 1px solid #dddddd;
+
+    button {
+      background: #fff;
+      background-color: none;
+      border: none;
+    }
+
     input {
       width: 100%;
       height: 100%;
@@ -34,6 +41,7 @@ export const SearchContainer = styled.div`
     }
   }
 `;
+
 export const SearchIcon = styled(HiOutlineSearch)`
   width: 25px;
   height: 25px;
