@@ -5,6 +5,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
   }
 
   body, html {
@@ -13,6 +14,8 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
     font-family: Quicksand, sans-serif;
   }
+
+
 `;
 
 export default GlobalStyles;

@@ -9,7 +9,6 @@ export const StoreInfosContainer = styled.div`
   padding: 23.96px 0 23.96px 58px;
 
   font-family: Quicksand, sans-serif;
-
   div {
     display: flex;
     flex-direction: column;
@@ -25,6 +24,12 @@ export const StoreInfosContainer = styled.div`
 
       width: 424px;
 
+      @media (max-width: 700px) {
+        transition: all 0.3s;
+        width: 100%;
+        flex-direction: column;
+      }
+
       p {
         font-size: 12px;
         color: #1bbb16;
@@ -36,20 +41,35 @@ export const StoreInfosContainer = styled.div`
       font-size: 28px;
     }
 
-    p {
+    section {
       display: flex;
-      align-items: center;
-      font-size: 19px;
-      font-weight: 400;
 
-      span {
-        margin-right: 10px;
-        color: #818181;
-        font-weight: 600;
+      p {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 19px;
+        font-weight: 400;
+
+        span {
+          margin-right: 10px;
+          color: #818181;
+          font-weight: 600;
+        }
+        strong {
+          margin-right: 10px;
+        }
       }
-      strong {
-        margin-right: 10px;
-      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    transition: all 0.3s;
+    padding: 20px 17px;
+    width: 100%;
+
+    h1 {
+      font-size: 24px;
     }
   }
 `;

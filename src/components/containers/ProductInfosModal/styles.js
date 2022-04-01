@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import { IoIosClose } from 'react-icons/io';
+import { MdKeyboardArrowLeft } from 'react-icons/md';
 
 export const ProductInfosModalContainer = styled.div`
   display: flex;
   justify-content: space-between;
 
   position: relative;
-  z-index: 2;
+  z-index: 5;
 
   padding: 30px;
   border-radius: 5px;
@@ -15,12 +16,26 @@ export const ProductInfosModalContainer = styled.div`
   height: 531px;
 
   background: #fff;
+
+  @media (max-width: 1200px) {
+    width: 90%;
+  }
+  @media (max-width: 800px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding-top: 100px;
+  } ;
 `;
 
 export const Overlay = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 
   position: fixed;
   z-index: 1;
@@ -44,13 +59,18 @@ export const CloseIcon = styled(IoIosClose)`
 `;
 
 export const ImageContainer = styled.div`
-  width: 398px;
+  width: 35%;
   height: 398px;
   border-radius: 5px;
   border: 1px solid #eaeaea;
+
+  @media (max-width: 800px) {
+    margin-top: 60px;
+    width: 70%;
+    height: 70%;
+  }
   img {
     width: 100%;
-    height: 100%;
     object-fit: cover;
     border-radius: 5px;
   }
@@ -60,7 +80,12 @@ export const ProductInfos = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 585px;
+  width: 60%;
+
+  @media (max-width: 800px) {
+    width: 90%;
+    height: 90%;
+  }
 
   div {
     display: flex;
@@ -79,6 +104,9 @@ export const ProductInfos = styled.div`
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    @media (max-width: 1200px) {
+      -webkit-line-clamp: 2;
+    }
   }
 
   label {
@@ -138,4 +166,42 @@ export const Discount = styled.p`
   color: #fff;
   font-size: 16px;
   font-weight: 700;
+`;
+
+export const CloseModalContainer = styled.div`
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+
+  Button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+
+    background: none;
+    border: none;
+
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  display: none;
+  height: 74px;
+  width: 100%;
+  background-color: #b41c8b;
+
+  @media (max-width: 800px) {
+    display: fixed;
+    top: 0;
+  } ;
+`;
+
+export const CloseModal = styled(MdKeyboardArrowLeft)`
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  color: #b41c8b;
 `;

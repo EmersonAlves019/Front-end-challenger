@@ -21,7 +21,6 @@ export function StoreProvider({ children }) {
       const dataProducts = await getProducts();
       setCategoryLIst(data.data);
       setProducts(dataProducts.data);
-      setIsLoading(false);
     })();
   }, [filterByQuery, categorySelected]);
 
@@ -29,7 +28,7 @@ export function StoreProvider({ children }) {
     const filterProducts = categoryList?.reduce(
       (acc, { name }) => ({
         ...acc,
-        [name]:
+        [categorySelected || name]:
           products[categorySelected || name]?.filter(product =>
             product.name?.toLowerCase().includes(filterByQuery?.toLowerCase()),
           ) || [],
@@ -37,6 +36,7 @@ export function StoreProvider({ children }) {
       {},
     );
     setProducts(filterProducts);
+    setIsLoading(false);
   }, [categoryList]);
 
   const storeMemo = useMemo(

@@ -3,8 +3,9 @@ import { FaShoppingCart } from 'react-icons/fa';
 
 export const CartInfosContainer = styled.div`
   align-self: center;
-  display: flex;
   padding-left: 36px;
+
+  display: flex;
   align-items: center;
   width: 363px;
   height: 120px;
@@ -19,10 +20,40 @@ export const CartInfosContainer = styled.div`
     font-size: 20px;
     font-weight: 800;
   }
+
+  @media (max-width: 1000px) {
+    position: fixed;
+    height: 60px;
+    bottom: 20px;
+    left: 10%;
+    right: 10%;
+    z-index: 1;
+    background-color: #b41c8b;
+    color: #fff;
+    width: 80vw;
+    border-radius: 8px;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      padding: 20px;
+    }
+
+    span {
+      background-color: #fff;
+      padding: 5px;
+      border-radius: 10px;
+    }
+  }
 `;
 
 export const CartLogo = styled(FaShoppingCart)`
   width: 26px;
   margin-top: -25px;
   margin-right: 13px;
+  @media (max-width: 1000px) {
+    margin: 0;
+  }
 `;

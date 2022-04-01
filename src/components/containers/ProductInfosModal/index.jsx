@@ -32,8 +32,14 @@ export default function ProductInfosModal() {
 
   return (
     modalOpen && (
-      <S.Overlay>
-        <S.ProductInfosModalContainer>
+      <S.Overlay className="fade">
+        <S.CloseModalContainer>
+          <button type="button" onClick={() => setModalOpen(!modalOpen)}>
+            <S.CloseModal />
+            <p>Voltar</p>
+          </button>
+        </S.CloseModalContainer>
+        <S.ProductInfosModalContainer className="fade">
           <S.CloseIcon size="50px" onClick={() => setModalOpen(!modalOpen)} />
           <S.ImageContainer>
             {modalContent?.discount && <S.Discount>{modalContent?.discount}</S.Discount>}

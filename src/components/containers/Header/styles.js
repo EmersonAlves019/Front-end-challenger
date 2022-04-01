@@ -7,6 +7,18 @@ export const HeaderContainer = styled.header`
   height: 265px;
   width: 100%;
   background: #fff;
+
+  @media (max-width: 700px) {
+    transition: all 0.3s;
+    height: 200px;
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+    h1 {
+    }
+  }
 `;
 
 export const TopContainer = styled.div`

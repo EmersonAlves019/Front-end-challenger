@@ -10,7 +10,7 @@ export default function CategoriesNavBar() {
 
   return (
     <S.CategoriesContainer>
-      {categoryList.map(({ name, id }) => (
+      {categoryList?.map(({ name, id }) => (
         <S.Category
           key={id}
           onClick={selectCategory}

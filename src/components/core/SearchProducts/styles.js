@@ -2,9 +2,21 @@ import styled from 'styled-components';
 import { HiOutlineSearch } from 'react-icons/hi';
 
 export const SearchProductForm = styled.div`
+  display: flex;
+  justify-content: flex-start;
   margin: 50px 0;
   width: 81.5vw;
   height: 54px;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+  @media (max-width: 800px) {
+    margin-top: 20px;
+    justify-content: center;
+    transition: all 0.3s;
+    width: 95%;
+  }
   form {
     display: flex;
     align-items: center;

@@ -5,6 +5,7 @@ import * as S from './styles';
 import ProductsList from '../../components/containers/ProductsList/index';
 import { useStore } from '../../context/hooks/storeContext';
 import ProductInfosModal from '../../components/containers/ProductInfosModal';
+import Footer from '../../components/containers/Footer/index';
 
 export default function Home() {
   const { modalOpen } = useStore();
@@ -19,6 +20,7 @@ export default function Home() {
         <SearchProducts />
         <ProductsList />
       </S.Main>
+      <Footer />
     </S.HomeContainer>
   );
 }

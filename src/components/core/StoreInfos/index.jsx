@@ -15,13 +15,17 @@ export default function StoreInfos() {
           </p>
         </div>
         <p>Avenida Rio Grande do Sul, 1520, Estados | 58030-021 | João Pessoa - PB</p>
-        <p>
-          <S.MotoLogo />
-          <strong>Delivery: </strong>
-          <span>35m - 1h:40m </span>
-          <strong>Entrega: </strong>
-          <span>À partir de R$ 3,00</span>
-        </p>
+        <section>
+          <p>
+            <S.MotoLogo />
+            <strong>Delivery: </strong>
+            <span>35m - 1h:40m </span>
+          </p>
+          <p>
+            <strong>Entrega: </strong>
+            <span>À partir de R$ 3,00</span>
+          </p>
+        </section>
       </div>
     </S.StoreInfosContainer>
   );
